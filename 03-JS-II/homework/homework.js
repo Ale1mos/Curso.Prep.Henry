@@ -49,8 +49,15 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-
-
+  if (idioma = "aleman") {
+    return "Guten Tag!";
+  } else if (idioma = "mandarin") {
+    return "Ni Hao!";
+  } else if (idioma = "ingles") {
+    return "Hello!";
+  } else {
+    return "Hola!";
+    }
 }
 
 function colors(color) {
@@ -61,6 +68,17 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  if (color === "blue"){
+    return "This is blue"
+  } else if (color === "red"){
+    return "This is red"
+  } else if (color === "green"){
+    return "This is green"
+  } else if (color === "orange"){
+    return "This is orange"
+  } else {
+    return "Color not found"
+  }
   
 }
 
@@ -69,7 +87,6 @@ function esDiezOCinco(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   return numero === 10 || numero === 5;
-
 }
 
 function estaEnRango(numero) {
@@ -88,7 +105,6 @@ function esEntero(numero) {
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
   return numero % 1 === 0;
-
 }
 
 function fizzBuzz(numero) {
@@ -100,7 +116,6 @@ function fizzBuzz(numero) {
   if (numero % 3 === 0) return "fizz";
   if (numero % 15 === 0) return "fizzbuzz";
   return numero
-
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -126,10 +141,9 @@ function operadoresLogicos(num1, num2, num3) {
 }
   
   
-  else{
+  else {
     return false;
   }
-
 }
 
 function esPrimo(numero) {
@@ -138,6 +152,14 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if( numero < 2) return false;
+  if(numero === 2) return true;
+  for(var i = 2; i < numero; i++) {
+    if(numero % i === 0) {
+      return false;
+    }
+  }
+  return true;
 
 }
 
@@ -171,6 +193,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var a = numero;
+  var i = 0;
+  do {
+    i = i + 1;
+    a = a + 5;
+  }
+  while(i < 8);
+  return a;
 }
 
 
